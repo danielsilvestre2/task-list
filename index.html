@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Um site simples de lista de tarefas">
+	<meta property="og:title" content="Lista de tarefas">
+	<meta property="og:description" content="lista de tarefas simples feita com html, css e js">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="images/link">
+	<meta property="og:url" content="https://github.io/danielsilvestre2/lista-html">
+	<link rel="stylesheet" href="style.css">
+	<title>Lista de Tarefas</title>
+</head>
+<body>
+	<header>
+		<h1>Lista de Tarefas</h1>
+	</header>
+	<main>
+		<section id="create-lists">
+			<div class="create-box">
+				<label>Dê um nome a tarefa</label>
+				<input type="text" placeholder="Ex.: Trabalho de historia" name="add-list" id="list-name">
+				<label>Dê uma descrição a tarefa</label>
+				<input placeholder="Ex.:Fazer um cartaz para a apresentação" type="text" name="description" id="list-descr">
+				<button id="bt">Adicionar Tarefa</button>
+			</div>
+		</section>
+
+		<section id="to-do-lists">
+			<span id="to-do-message"></span>
+			<nav class="to-do-lists-nav">
+				<div class="text">
+					<h2>Para fazer</h2>
+				</div>
+				<div class="buttons">
+					<button class="trash">
+						<img src="icons/trash.svg" alt="Trash-icon">
+					</button>
+				</div>
+			</nav>
+			<div class="list">
+				<div class="text">
+					<h2>Legislção</h2>
+					<p>Fazer dever de casa do lívro na página 22</p>
+				</div>
+				<div class="buttons">
+					<abbr title="Remover Tarefa">
+						<button id="remove">X</button>
+					</abbr>
+					<input class="check" type="checkbox" name="checkmark" id="check">
+				</div>
+			</div>
+			<span class="noone-lists"></span>
+		</section>
+
+		<section id="maked-lists">
+			<nav class="maked-lists-nav">
+				<div class="text">
+					<h2>Feitas</h2>
+				</div>
+			</nav>
+			<div class="list">
+				<div class="text">
+					<h2 class="list-disabled">Legislação</h2>
+					<p class="list-disabled">Fazer dever de casa do livro na página 22</p>
+				</div>
+				<div class="buttons">
+					<abbr title="Remover Tarefa">
+						<button id="remove">X</button>
+					</abbr>
+					<input class="check disabled" type="checkbox" disabled name="checkmark" id="check-maked">
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="script.js" defer></script>
+</body>
+</html>
